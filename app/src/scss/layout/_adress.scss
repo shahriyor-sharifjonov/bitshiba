@@ -71,6 +71,10 @@
 }
 .token{
     margin-bottom: 135px;
+    position: relative;
+    @include media(992){
+        overflow: hidden;   
+    }
     @include media(576){
         margin-bottom: 100px;
     }
@@ -99,8 +103,12 @@
         align-items: stretch;
         column-gap: 30px;
         row-gap: 20px;
+        margin-bottom: 135px;
         @include media(992){
             flex-wrap: wrap;   
+        }
+        @include media(576){
+            margin-bottom: 100px;
         }
     }
     &__item{
@@ -146,6 +154,76 @@
             }
             a{
                 color: #FF7F00;
+            }
+        }
+    }
+    &__row{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include media(992){
+            flex-direction: column;   
+        }
+    }
+    &__col{
+        width: 50%;
+        @include media(992){
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &:last-child{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        &-img{
+            max-width: 100%;
+        }
+        &-light{
+            max-width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            z-index: -1;
+            @include media(992){
+                max-width: 1400px;   
+                width: 1400px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &-title{
+            font-size: 48px;
+            line-height: 150%;
+            text-align: center;
+            @extend .text-grad;
+            margin-bottom: 35px;
+            @include media(992){
+                margin-top: 35px;   
+            }
+            @include media(576){
+                font-size: 24px;
+                line-height: 150%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+        &-p{
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 200%;
+            text-align: center;
+            color: #FFFFFF;
+            @include media(576){
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 200%;
+                text-align: center;
             }
         }
     }
