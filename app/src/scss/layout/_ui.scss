@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Oswald', sans-serif;
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+html,body{
+    min-height: 100vh;
+}
+body{
+    position: relative;
+    background-color: #05142E;
+    background-image: url('../images/stars.png');
+    object-fit: cover;
+    background-repeat: repeat;
+    object-position: center;
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+button {
+    font-family: inherit;
+    cursor: pointer;
+    background: linear-gradient(90deg, #F1F011 21.27%, #F9D311 63.57%);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 125%;
+    border: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    font-family: inherit;
+}
+a {
+    text-decoration: none;
+}
