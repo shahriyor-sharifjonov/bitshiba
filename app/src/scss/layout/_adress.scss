@@ -1,0 +1,32 @@
+.adress{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+    &__content{
+        font-size: 24px;
+        line-height: 200%;
+        text-align: center;
+        color: #fff;
+        @include media(576){
+            font-size: 14px;
+            line-height: 200%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+    &__title{
+        background: linear-gradient(90deg, #F1F011 21.27%, #F9D311 63.57%); 
+        color: transparent;
+        background-clip: text;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 200%;
+        @include media(576){
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 200%;
+            text-align: center;
+        }
+    }
+}
