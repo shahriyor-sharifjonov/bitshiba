@@ -3,6 +3,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 135px;
+    @include media(576){
+        margin-bottom: 100px;   
+    }
     &__title{
         margin-bottom: 35px;
         @include media(576){
@@ -15,9 +19,9 @@
         line-height: 200%;
         text-align: center;
         color: #FFFFFF;
-        margin-bottom: 50px;
+        margin-bottom: 115px;
         @include media(576){
-            margin-bottom: 25px;    
+            margin-bottom: 75px;    
         }
     }   
     &__content{
@@ -27,17 +31,33 @@
         flex-wrap: wrap;
         width: 100%;
         row-gap: 100px;
+        @include media(992){
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;   
+        }
     }
     &__col{
         width: 50%;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        @include media(992){
+            width: 100%;
+            justify-content: center;
+        }
+        @include media(768){
+            justify-content: flex-start;   
+        }
     }
     &__item{
         box-sizing: border-box;
         width: 300px;
         position: relative;
+        padding: 20px 30px;
+        @include media(576){
+            width: 220px;   
+        }
         &::after{
             content: '';
             position: absolute;
@@ -63,6 +83,38 @@
             -webkit-text-stroke: 1px #FF7F00;
             color: transparent;
             z-index: -2;
+            @include media(576){
+                left: 191px;
+                font-size: 96px;
+                line-height: 100%;
+            }
+        }
+        &-title{
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 24px;
+            line-height: 200%;
+            text-align: center;
+            @extend .text-grad;
+            @include media(576){
+                font-size: 18px;
+                line-height: 200%;
+                text-align: center;
+            }
+            img{
+                margin-right: 10px;
+            }
+        }
+        &-p{
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 200%;
+            color: #FFFFFF;
+            @include media($sm){
+                font-size: 14px;
+            }
         }
     }
 }
