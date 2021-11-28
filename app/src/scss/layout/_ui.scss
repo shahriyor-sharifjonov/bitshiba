@@ -43,3 +43,22 @@ input {
 a {
     text-decoration: none;
 }
+.text-grad{
+    color: transparent;
+    background: linear-gradient(90deg, #F1F011 21.27%, #F9D311 63.57%);
+    background-clip: text;
+}
+.title{
+    font-size: 48px;
+    line-height: 150%;
+    text-align: center;
+    color: #FFFFFF;
+    @include media($sm){
+        font-size: 24px;
+        line-height: 150%;
+        text-align: center;
+    }
+    &.grad{
+        @extend .text-grad;
+    }
+}
