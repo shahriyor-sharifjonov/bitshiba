@@ -24,10 +24,16 @@ function menuCheck(){
         document.body.style.overflow = "auto";
     }
 }
-function openPopup(){
-    console.log('hahga');
-       
+function closePopup(){
+  const popup = document.querySelector('.popup');
+  popup.classList.remove('active');
 }
+window.addEventListener('load', function(){
+  this.setTimeout(() => {
+    const popup = document.querySelector('.popup');
+    popup.classList.add('active');
+  }, 5000);
+})
 
 $(document).ready(function() {
   $(".set > a").on("click", function() {
